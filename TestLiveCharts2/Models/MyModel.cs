@@ -105,10 +105,13 @@ public class MyModel
 
     #region 波形相关
 
+
+  
+
     private void StartThreadForECGData()
     {
-        //_taskState = true;
         //// 数据来的时候刷新， 或者 用 开关按钮 控制  进程刷新 和 进程数量
+        ///  Refresh the chart in real-time when data comes in, and have animation
         for (var i = 0; i < 8; i++)
             Task.Run(StartTask_ECG);
         for (int i = 0; i < 2; i++)
@@ -123,6 +126,7 @@ public class MyModel
 
     private async void StartTask_ECG()
     {
+        ///  Refresh the chart in real-time when data comes in, and have animation
         while (true)
         {
             await Task.Delay(1);

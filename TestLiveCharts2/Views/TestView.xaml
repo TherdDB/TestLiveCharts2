@@ -13,7 +13,7 @@
 
     <Border BorderBrush="#99333333" BorderThickness="1">
         <Grid>
-            <!--<TextBlock Text="{Binding Series}" />-->
+            <!--  ///   Simulate data obtained per second per . Refresh the chart in real-time when data comes in, and have animation  -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition />
@@ -28,7 +28,6 @@
                     Margin="1"
                     BorderBrush="#99333333"
                     BorderThickness="1">
-                <!--  Margin="-40,0,-40,0"  -->
                 <lvc:CartesianChart Grid.Row="0"
                                     Grid.Column="0"
                                     Series="{Binding Series_ECG}"

@@ -27,8 +27,17 @@
                          VerticalContentAlignment="Center"
                          Text="{Binding Count}" />
             </StackPanel>
+
+
+            <!--  ///   Simulate data obtained per second per . Refresh the chart in real-time when data comes in, and have animation  -->
+
+            <!--  Add queue  -->
             <Button Command="{Binding AddItemCommand}" Content="AddItem" />
+
+            <!--  Start Simulation  -->
             <Button Command="{Binding StartCommand}" Content="Start" />
+
+
             <Button Command="{Binding StopCommand}" Content="Stop" />
 
         </UniformGrid>
@@ -41,6 +50,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
+
                         <local:TestView DataContext="{Binding}" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
