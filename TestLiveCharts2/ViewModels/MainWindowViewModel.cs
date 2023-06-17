@@ -50,7 +50,7 @@ public partial class MainWindowViewModel : ObservableObject
     {
         ///   Simulate data obtained per second per 
         ///  Refresh the chart in real-time when data comes in, and have animation
-        ///  
+
         data1 = ecg.Split('^').Select(int.Parse).ToArray();
         data2 = spo2.Split('^').Select(int.Parse).ToArray();
 
